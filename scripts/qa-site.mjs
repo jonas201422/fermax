@@ -185,7 +185,10 @@ await check("instagram links include svg icons", async () => {
 await check("keyboard focus reaches nav and CTAs", async () => {
   await page.keyboard.press("Home");
   for (let i = 0; i < 9; i += 1) await page.keyboard.press("Tab");
-  const focused = await page.evaluate(() => document.activeElement?.textContent || document.activeElement?.getAttribute("aria-label"));
+  const focused = await page.evaluate(() => {
+    const element = document.activeElement;
+    return element?.getAttribute("aria-label") || element?.textContent || "";
+  });
   if (!focused || focused.trim().length === 0) throw new Error("no readable focused element");
 });
 
