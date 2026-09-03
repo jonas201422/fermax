@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="236" height="104" viewBox="16 44 118 52" role="img" aria-labelledby="title desc">
+  <title id="title">FERMAX</title>
+  <desc id="desc">Kompakte FERMAX-Wortmarke aus der vorhandenen Vektorgrafik.</desc>
+  <g fill="none" stroke-linecap="square" stroke-linejoin="miter">
+    <g id="frame" stroke="#697071" stroke-width="0.62">
+      <path d="M41.45 58.25H21.05V95.05H57.3"/>
+      <path d="M108.55 57.5H128.45V95.05H92.35"/>
+    </g>
+    <g id="roof-secondary" stroke="#73797b" stroke-width="0.8">
+      <path d="M50.85 67.45L74.9 55.55"/>
+      <path d="M65.8 49.8L85.55 63.85"/>
+    </g>
+    <path id="roof-primary" d="M35.35 75.3L50.2 57.65L65.2 74.5" stroke="#191d1e" stroke-width="1.02"/>
+    <path id="roof-accent" d="M75.45 61.2H123.1" stroke="#36b2c0" stroke-width="1.07"/>
+    <g id="wordmark" stroke="#15191b" stroke-width="1.1">
+      <path id="letter-f" d="M33.55 91.2V82.15H44M33.55 86.75H42.9"/>
+      <path id="letter-e" d="M57.3 82.15H46.95V91.2H57.3M46.95 86.7H56.45"/>
+      <path id="letter-r" d="M60.5 91.2V82.15H69.2Q71.25 82.15 71.25 84.1V84.95Q71.25 86.8 69.2 86.8H60.5M66.2 87.15L71.25 91.2"/>
+      <path id="letter-m" fill="#15191b" stroke="none" d="M74.45 91.75V81.6H75.3L80.7 89.03L86.08 81.6H86.9V91.75H85.8V84.01L80.7 91.02L75.55 84.01V91.75Z"/>
+      <path id="letter-a" d="M89.15 91.2L95.15 82.15L101.2 91.2M91.35 87.9H98.9"/>
+      <path id="letter-x" d="M105.75 82.15L115.25 91.2M115.25 82.15L105.75 91.2" stroke="#36b2c0"/>
+    </g>
+  </g>
+</svg>

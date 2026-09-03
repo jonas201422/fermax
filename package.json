@@ -1,0 +1,19 @@
+{
+  "name": "fermax-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run optimize:images && vite --host 127.0.0.1",
+    "build": "npm run optimize:images && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "qa": "node scripts/qa-site.mjs",
+    "check": "npm run build && npm run qa"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1",
+    "sharp": "^0.35.4",
+    "vite": "^7.2.7"
+  }
+}
