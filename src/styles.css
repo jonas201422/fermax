@@ -777,15 +777,13 @@ p {
   font-weight: 760;
 }
 
-.social-group,
-.footer-socials {
+.social-group {
   display: grid;
   gap: 10px;
   margin-top: 16px;
 }
 
-.social-label,
-.footer-socials span {
+.social-label {
   color: var(--accent);
   font-size: 0.72rem;
   font-weight: 820;
@@ -794,33 +792,42 @@ p {
   text-transform: uppercase;
 }
 
-.social-icon {
-  width: 46px;
-  height: 46px;
+.instagram-action {
+  min-height: 46px;
+  width: fit-content;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+  padding: 10px 12px;
   border: 1px solid rgba(54, 178, 192, 0.42);
   border-radius: var(--radius);
   background: rgba(54, 178, 192, 0.08);
   color: var(--white);
+  line-height: 1.1;
   text-decoration: none;
   transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
-.social-icon:hover {
+.instagram-action:hover {
   transform: translateY(-1px);
   border-color: rgba(54, 178, 192, 0.78);
   background: rgba(54, 178, 192, 0.13);
 }
 
-.social-icon svg {
+.instagram-action svg,
+.footer-instagram svg {
   flex: 0 0 auto;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.85;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.instagram-action .external-icon,
+.footer-instagram .external-icon {
+  stroke-width: 2.1;
 }
 
 .site-footer {
@@ -854,6 +861,7 @@ p {
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 16px;
 }
 
@@ -862,23 +870,19 @@ p {
   font-weight: 720;
 }
 
-.footer-socials {
-  margin-top: 0;
-}
-
-.footer-socials span {
+.footer-instagram {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 2px;
   color: var(--accent-on-light);
+  text-decoration-color: rgba(11, 119, 132, 0.38);
 }
 
-.social-icon-light {
-  border: 1px solid rgba(11, 119, 132, 0.28);
-  color: var(--accent-on-light);
-  background: rgba(255, 255, 255, 0.56);
-}
-
-.social-icon-light:hover {
-  border-color: rgba(11, 119, 132, 0.52);
-  background: rgba(11, 119, 132, 0.08);
+.footer-instagram:hover {
+  color: var(--ink);
+  text-decoration-color: var(--accent-on-light);
 }
 
 .mobile-action-bar {
@@ -1250,7 +1254,7 @@ p {
   }
 
   .footer-inner {
-    grid-template-columns: auto minmax(220px, 1fr) auto auto;
+    grid-template-columns: auto minmax(220px, 1fr) auto;
     align-items: center;
   }
 
