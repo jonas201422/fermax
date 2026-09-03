@@ -169,11 +169,12 @@ await check("jump link aligns below sticky header", async () => {
 });
 
 await check("contact links are exact", async () => {
-  const hrefs = await page.locator("a[href^='tel:'], a[href^='mailto:']").evaluateAll((links) =>
+  const hrefs = await page.locator("a[href^='tel:'], a[href^='mailto:'], a[href*='instagram.com/fermax.dach']").evaluateAll((links) =>
     links.map((link) => link.getAttribute("href"))
   );
   if (!hrefs.includes("tel:+436644638568")) throw new Error("phone link missing");
   if (!hrefs.includes("mailto:office@fermax.at")) throw new Error("email link missing");
+  if (!hrefs.includes("https://www.instagram.com/fermax.dach/")) throw new Error("instagram link missing");
 });
 
 await check("keyboard focus reaches nav and CTAs", async () => {
