@@ -177,6 +177,11 @@ await check("contact links are exact", async () => {
   if (!hrefs.includes("https://www.instagram.com/fermax.dach/")) throw new Error("instagram link missing");
 });
 
+await check("instagram links include svg icons", async () => {
+  const count = await page.locator("a[href='https://www.instagram.com/fermax.dach/'] svg").count();
+  if (count < 2) throw new Error(`expected instagram svg icons, got ${count}`);
+});
+
 await check("keyboard focus reaches nav and CTAs", async () => {
   await page.keyboard.press("Home");
   for (let i = 0; i < 9; i += 1) await page.keyboard.press("Tab");
